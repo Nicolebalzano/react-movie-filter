@@ -8,13 +8,7 @@ const FilmList = ({ films }) => {
   const [searchTerm, setSearchTerm] = useState("")
 
   useEffect(() => {
-    const newFilmFiltrati = films.filter(
-      (curMovie) => selectedType === "tutti" || selectedType === curMovie.genre
-    );
-    setFilmFiltrati(newFilmFiltrati);
-  }, [selectedType]);
-  useEffect(() => {
-  const newFilmFiltrati = filmList.filter(
+  const newFilmFiltrati = films.filter(
     (curMovie) =>
       (selectedType === "tutti" || selectedType === curMovie.genre) &&
       curMovie.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -41,6 +35,7 @@ const FilmList = ({ films }) => {
           onChange={(event) => setSelectedType(event.target.value)}
           className="form-select mt-3 w-50"
         >
+           <option value="Genere">Genere</option>
           <option value="Fantascienza">Fantascienza</option>
           <option value="Thriller">Thriller</option>
           <option value="Romantico">Romantico</option>
