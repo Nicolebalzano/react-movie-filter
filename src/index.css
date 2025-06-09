@@ -1,3 +1,18 @@
+body {
+    background: url("./movie-bg.png");
+    background-size:700px;
+
+}
+h1{
+background-color: antiquewhite;
+}
+li{
+    background-color: white;
+}
+h5 {
+    background-color: #f4eded;
+}
 span {
-    background-color: rgba(215, 215, 215, 0.5);
+    background-color: rgba(255, 4, 4, 0.5);
+    color: #ffffff;
 }
